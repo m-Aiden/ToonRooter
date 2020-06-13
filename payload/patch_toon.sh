@@ -54,3 +54,8 @@ echo >> /root/.ssh/authorized_keys
 
 # TODO: remove duplicate lines from authorized_keys. This may do the trick:
 # awk '!a[$0]++' /root/.ssh/authorized_keys
+
+echo ">>> Downloading update-rooted script"
+curl -Nks https://raw.githubusercontent.com/ToonSoftwareCollective/update-rooted/master/update-rooted.sh -o /root/update-rooted.sh
+echo ">>> Running update-rooted script"
+sh /root/update-rooted.sh -f 
